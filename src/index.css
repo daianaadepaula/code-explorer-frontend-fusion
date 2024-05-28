@@ -9,6 +9,13 @@
   color-scheme: dark;
 }
 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: auto;
+}
+
 @layer base {
   body {
     @apply font-sans text-base;

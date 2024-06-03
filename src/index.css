@@ -6,19 +6,19 @@
 
 :root {
   --font-sora: "Sora", sans-serif;
-  color-scheme: dark;
 }
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	height: auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer base {
-  body {
-    @apply font-sans text-base;
-  }
+body {
+	font-family: "Sora", sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #1a0e27 0%, rgba(20, 12, 33, 0.8) 100%);
+  color: #ffffff;
+	font-size: 18px;
 }
-

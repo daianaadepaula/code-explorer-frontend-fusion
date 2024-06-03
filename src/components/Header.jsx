@@ -10,13 +10,13 @@ const Header = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-      <div className="container px-4 mx-auto relative text-sm">
+    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-400/80">
+      <div className="px-4 mx-auto relative">
         <div className="flex justify-between items-center">
-          <span className="bg-gradient-to-r from-indigo-500 to-cyan-800 text-transparent bg-clip-text text-xl tracking-tight">
+          <span className="bg-gradient-to-r from-indigo-500 to-cyan-800 text-transparent bg-clip-text text-2xl tracking-tight">
             Daiana
           </span>
-          <ul className="hidden lg:flex ml-14 space-x-12">
+          <ul className="hidden md:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
                 <a
@@ -28,15 +28,15 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <div className="lg:hidden md:flex flex-col justify-end">
+          <div className="md:hidden sm:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}
             </button>
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-            <ul>
+          <div className="fixed right-0 z-20 bg-[#444299] w-full p-12 flex flex-col justify-center items-center md:hidden">
+            <ul className="flex flex-col gap-4">
               {navItems.map((item, index) => (
                 <li key={index}>
                   <a

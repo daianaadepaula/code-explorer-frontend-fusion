@@ -1,56 +1,25 @@
-import {
-  LinkedinIcon,
-  InstagramIcon,
-  FacebookIcon,
-  Twitter,
-} from "lucide-react";
+import { navItems } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="border-t py-6 border-neutral-700">
-      <div className="flex flex-col lg:flex-row sm:justify-between justify-center items-center gap-10">
-        <p className="caption text-n-4 lg:block">
+    <footer className="border-t py-6 text-white border-neutral-400">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+        <p className="text-center md:text-left">
           © {new Date().getFullYear()}. Todos os direitos reservados.
         </p>
 
-        <div className="flex flex-wrap gap-5 justify-center">
-          <div className="flex">
-            <a
-              href=""
-              target="_blank"
-              className="flex items-center justify-center w-10 h-10 bg-neutral-700 rounded-full transition-colors hover:text-indigo-300"
-            >
-              <LinkedinIcon size={16} />
-            </a>
-          </div>
-          <div className="flex">
-            <a
-              href=""
-              target="_blank"
-              className="flex items-center justify-center w-10 h-10 bg-neutral-700 rounded-full transition-colors hover:text-indigo-300"
-            >
-              <InstagramIcon size={16} />
-            </a>
-          </div>
-          <div className="flex">
-            <a
-              href=""
-              target="_blank"
-              className="flex items-center justify-center w-10 h-10 bg-neutral-700 rounded-full transition-colors hover:text-indigo-300"
-            >
-              <FacebookIcon size={16} />
-            </a>
-          </div>
-          <div className="flex">
-            <a
-              href=""
-              target="_blank"
-              className="flex items-center justify-center w-10 h-10 bg-neutral-700 rounded-full transition-colors hover:text-indigo-300"
-            >
-              <Twitter size={16} />
-            </a>
-          </div>
+        <div className="flex items-center">
+          <ul className="flex flex-col gap-4 md:flex-row md:ml-8 space-x-10">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <a className="hover:text-indigo-300" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
+				
       </div>
     </footer>
   );
